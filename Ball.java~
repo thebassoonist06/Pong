@@ -1,0 +1,56 @@
+
+//////////////////////////////////////////////////////////////
+//
+// Pong game: This class builds the Ball
+//
+// Author: Sydney Lyon
+// Updated: 4/30/2016
+//
+//////////////////////////////////////////////////////////////
+import java.*;
+class Ball{
+
+    private int x = 200;
+    private int y = 200;
+    private int dx = 1;
+    private int dy = 1;
+    public static final int DIAMETER = 20;
+    private Random rand = new Random();
+
+    // returns current x value
+    public int x(){
+	return this.x;
+    }
+
+    // returns current y value
+    public int y(){
+	return this.y;
+    }
+
+    // moves x and y accordign to dx and dy
+    public void move(){
+	this.x += this.dx;
+	this.y += this.dy;
+    }
+
+    // reverses direction of x
+    public void revDx(){
+	this.dx *= -1;
+    }
+
+    // reverses direction of y
+    public void revDy(){
+	this.dy *= -1;
+    }
+
+    // draws our ball
+    public void draw(Graphics g){
+	// draws black outline
+	g.setColor(Color.black);
+	g.drawOval(this.x, this.y, DIAMETER, DIAMETER);
+	// draws white fill
+	g.setColor(Color.white);
+	g.fillOval(this.x, this.y, DIAMETER, DIAMETER);
+    }
+
+}
