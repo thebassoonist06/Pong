@@ -13,9 +13,9 @@ import java.awt.Graphics;
 
 public class Paddle {
     public static final int PWIDTH = 50;
-    public static final int PHEIGHT = 10;
-    private int x = Table.FWIDTH/2 - PWIDTH/2;
-    private int y = Table.FHEIGHT - PHEIGHT;
+    public static final int PHEIGHT = 20;
+    private int x = 275;//Table.FWIDTH/2 - PWIDTH/2;
+    private int y = 560;//Table.FHEIGHT - PHEIGHT;
 
     // moves paddle right
     public void moveRight(){
@@ -24,7 +24,7 @@ public class Paddle {
 
     // moves paddle left
     public void moveLeft(){
-	this.y += 10;
+	this.x -= 10;
     }
 
     // returns current x value of paddle
@@ -43,4 +43,5 @@ public class Paddle {
 	g.fillRect(this.x, this.y, PWIDTH, PHEIGHT);
     }
 
+  
 }

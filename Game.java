@@ -16,6 +16,8 @@ import java.awt.event.KeyEvent;
 import javax.swing.Timer;
 import java.awt.Color;
 import java.awt.Graphics;
+import javax.swing.JOptionPane;
+import java.util.*;
 
 public class Game
     extends JPanel
@@ -32,7 +34,7 @@ public class Game
 	this.setBackground(new Color(30, 100, 30));
 
 	// create a new timer and start it
-	this.timer = new Timer(20, this);
+	this.timer = new Timer(10, this);
 	this.timer.start();
     }
 
@@ -124,6 +126,8 @@ public class Game
 	this.timer.stop();
 
 	// TO-DO:  CREATE A POP UP WINDOW
+	JOptionPane.showMessageDialog
+	    (null, "Game Over");
     }
 
 }

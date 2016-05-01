@@ -19,6 +19,7 @@ class Table extends JFrame{
     public Table(){
 	// makes frame visible
 	this.setVisible(true);
+	this.setTitle("Pong");
 	// sets the desired height and width of frame
 	this.setSize(FWIDTH, FHEIGHT);
 	// make a new Game to put on table
@@ -27,6 +28,8 @@ class Table extends JFrame{
 	this.add(game);
 	// add key listener to our game for user input
 	this.addKeyListener(game);
+	// on close
+	this.setDefaultCloseOperation(3);
     }
 
     public static void main(String[] args){
