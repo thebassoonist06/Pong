@@ -126,8 +126,8 @@ public class Game
 	this.timer.stop();
 
 	// TO-DO:  CREATE A POP UP WINDOW
-	JOptionPane.showMessageDialog
-	    (null, "Game Over");
+	g.setColor(Color.black);
+	JOptionPane.showMessageDialog(null, "Game Over");
     }
 
 }
